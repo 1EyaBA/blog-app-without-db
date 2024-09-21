@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+
+<div class="contain">
+
+    <form class="myForm" action="/compose" method="post">
+    <div class="mb-3">
+        <h1>Compose a New Post</h1>
+    </div>
+    
+    <div class="mb-3">
+      <label for="postTitle" class="form-label">Post Title</label>
+      <input type="text" class="form-control" id="postTitle" name="postTitle" placeholder="Enter post title" required>
+    </div>
+    <div class="mb-3">
+      <label for="postContent" class="form-label">Post Content</label>
+      <textarea class="form-control" id="postContent" name="postContent" rows="10" cols="100" placeholder="Enter post content" required></textarea>
+
+    </div>
+
+    <button type="submit" class="btn btn-secondary">Publish</button>
+    </form>
+</div>
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,18 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Welcome to the Blog</h1>
+  <a href="/compose">Compose a New Post</a>
+
+  <div class="posts">
+    <% posts.forEach((post, index) => { %>
+      <div class="post-item">
+        <h2><a href="/post/<%= index %>"><%= post.title %></a></h2>
+        <p><%= post.content.substring(0, 100) %>...</p>
+        <a href="/edit/<%= index %>">Edit</a>
+        <a href="/delete/<%= index %>" onclick="return confirm('Are you sure?')">Delete</a>
+      </div>
+    <% }); %>
+  </div>
+
+
+<%- include("partials/footer.ejs") %>
